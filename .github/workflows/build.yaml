@@ -135,6 +135,10 @@ jobs:
           echo "src-git sqm_nss https://github.com/JuliusBairaktaris/sqm-scripts-nss" >> feeds.conf
 
           # Update and install feeds
+          run: |
+            echo "src-git amnezia https://github.com/amnezia-vpn/amneziawg-openwrt.git" >> feeds.conf.default
+            ./scripts/feeds update -a
+            ./scripts/feeds install -a
           ./scripts/feeds update qosmio
           ./scripts/feeds install -a -p qosmio
           ./scripts/feeds update sqm_nss
