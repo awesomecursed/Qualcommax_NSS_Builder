@@ -139,12 +139,12 @@ jobs:
             echo "src-git amnezia https://github.com/amnezia-vpn/amneziawg-openwrt.git" >> feeds.conf.default
             ./scripts/feeds update -a
             ./scripts/feeds install -a
-          ./scripts/feeds update qosmio
-          ./scripts/feeds install -a -p qosmio
-          ./scripts/feeds update sqm_nss
-          ./scripts/feeds install -a -p sqm_nss
-          ./scripts/feeds update -a
-          ./scripts/feeds install -a
+            ./scripts/feeds update qosmio
+            ./scripts/feeds install -a -p qosmio
+            ./scripts/feeds update sqm_nss
+            ./scripts/feeds install -a -p sqm_nss
+            ./scripts/feeds update -a
+            ./scripts/feeds install -a
 
           # Configure
           cp "../builder_repo/${CONFIG_FILE}" .config
